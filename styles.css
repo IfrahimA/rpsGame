@@ -1,0 +1,14 @@
+.title
+{
+    font-family: 'Helvetica'; 
+    font-size: 50px;
+    text-align: center;
+    margin-top: 25px; 
+}
+.buttons
+{
+    display: flex; 
+    justify-content: center;
+    gap: 50px; 
+    margin: 100px; 
+}
