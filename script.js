@@ -67,12 +67,29 @@ function playAround(playerSelection, computerChoice)
     }
 }
 
+const computerResult = document.getElementById("cResult");
+const playerResult = document.getElementById("pResult"); 
+function updateText(c, p)
+{
+    computerResult.textContent = c; 
+    playerResult.textContent = p; 
+}
+
+function updateScore()
+{
+    const sc = document.getElementById("score"); 
+    sc.textContent = "Score: " + computerScore + " - " + playerScore; 
+}
+
+
 const rockButton = document.getElementById("R"); 
 rockButton.addEventListener('click', () =>
 {
     playerChoice = "ROCK";
     computerChoice = getComputerChoice(); 
     playAround(playerChoice, computerChoice); 
+    updateText(computerChoice, playerChoice); 
+    updateScore(); 
 }); 
 
 const paperButton = document.getElementById("P"); 
@@ -80,7 +97,9 @@ paperButton.addEventListener('click', () =>
 {
     playerChoice = "PAPER";
     computerChoice = getComputerChoice(); 
-    playAround(playerChoice, computerChoice); 
+    playAround(playerChoice, computerChoice);
+    updateText(computerChoice, playerChoice);
+    updateScore(); 
 }); 
 
 const scissorButton = document.getElementById("S"); 
@@ -89,5 +108,8 @@ scissorButton.addEventListener('click', () =>
     playerChoice = "SCISSORS";
     computerChoice = getComputerChoice(); 
     playAround(playerChoice, computerChoice); 
+    updateText(computerChoice, playerChoice); 
+    updateScore(); 
 }); 
+
 

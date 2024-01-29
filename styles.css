@@ -12,8 +12,30 @@
     gap: 50px; 
     margin: 50px; 
 }
-.start
+#score
 {
     text-align: center;
-    height: 400;
+    font-size: 50px; 
+    margin: 25px; 
+}
+.main
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 200px;
+    font-size: 30px; 
+}
+.pList, .cList
+{
+    list-style-type: none; 
+    margin: 0px; 
+    margin-top: 20px;
+    padding: 0px; 
+}
+.comp, .play
+{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
 }
