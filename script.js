@@ -81,6 +81,23 @@ function updateScore()
     sc.textContent = "Score: " + computerScore + " - " + playerScore; 
 }
 
+function checkScore()
+{
+    const sc = document.getElementById("score"); 
+    if(computerScore == 5)
+    {
+        sc.textContent = "Woops. The Computer Wins.";
+        computerScore = 0;
+        playerScore = 0; 
+    }
+    else if(playerScore == 5)
+    {
+        sc.textContent = "Congradulations! You Win!";
+        computerScore = 0; 
+        playerScore = 0;  
+    }
+}
+
 
 const rockButton = document.getElementById("R"); 
 rockButton.addEventListener('click', () =>
@@ -90,6 +107,7 @@ rockButton.addEventListener('click', () =>
     playAround(playerChoice, computerChoice); 
     updateText(computerChoice, playerChoice); 
     updateScore(); 
+    checkScore(); 
 }); 
 
 const paperButton = document.getElementById("P"); 
@@ -99,7 +117,8 @@ paperButton.addEventListener('click', () =>
     computerChoice = getComputerChoice(); 
     playAround(playerChoice, computerChoice);
     updateText(computerChoice, playerChoice);
-    updateScore(); 
+    updateScore();
+    checkScore();  
 }); 
 
 const scissorButton = document.getElementById("S"); 
@@ -110,6 +129,7 @@ scissorButton.addEventListener('click', () =>
     playAround(playerChoice, computerChoice); 
     updateText(computerChoice, playerChoice); 
     updateScore(); 
+    checkScore(); 
 }); 
 
 
